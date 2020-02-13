@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.bottomNavigationView.selectedItemId = R.id.menu_home
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(menuClickListener)
+        binding.bottomNavigationView.selectedItemId = R.id.menu_home
     }
 
     private val menuClickListener = BottomNavigationView.OnNavigationItemSelectedListener {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             R.id.menu_menu -> MenuFragment()
             else -> FavoriteFragment()
         }
-        supportFragmentManager.beginTransaction().replace(binding.frameContainer.id, fragment)
+        supportFragmentManager.beginTransaction().replace(binding.frameContainer.id, fragment).commit()
         return@OnNavigationItemSelectedListener true
     }
 }

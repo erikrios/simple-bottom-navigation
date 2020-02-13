@@ -9,10 +9,10 @@ import com.erikriosetiawan.simplebottomnavigation.databinding.FragmentMenuBindin
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {
 
-    private lateinit var binding: FragmentMenuBinding
+    private var binding: FragmentMenuBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = DataBindingUtil.setContentView(activity as Activity, view.id)
+        binding = DataBindingUtil.bind(view)
     }
 }
