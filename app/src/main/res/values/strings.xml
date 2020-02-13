@@ -4,4 +4,5 @@
     <string name="menu">Menu</string>
     <string name="favorite">Favorite</string>
     <string name="home_fragment">Home Fragment</string>
+    <string name="menu_fragment">Menu Fragment</string>
 </resources>
